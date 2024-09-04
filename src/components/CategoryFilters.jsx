@@ -94,7 +94,6 @@ export default function CategoryFilters() {
   };
 
   const handlePage = (page) => {
-    console.log(page);
     setPage(page);
   };
 

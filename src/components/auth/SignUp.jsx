@@ -94,7 +94,7 @@ export default function SignUp() {
                   />
 
                   <span
-                    className="flex w-8 h-8 absolute cursor-pointer right-1 items-center"
+                    className="flex w-8 h-8 absolute cursor-pointer right-1 items-center select-none"
                     onClick={handleShowPassword}
                   >
                     {

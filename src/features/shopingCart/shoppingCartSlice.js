@@ -1,5 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { addToCart } from "./shoppingCartApi";
+import {
+  addToCart,
+  fetchCartByUserId,
+  removeCartItem,
+  updateCart,
+} from "./shoppingCartApi";
 
 export const addToCartAsync = createAsyncThunk(
   "/cart/addToCart",
@@ -9,9 +14,31 @@ export const addToCartAsync = createAsyncThunk(
   }
 );
 
+export const fetchCartByUserIdAsync = createAsyncThunk(
+  "/cart/fetchCartByUserId",
+  async (userId) => {
+    const response = await fetchCartByUserId(userId);
+    return response;
+  }
+);
+
+export const updateCartAsync = createAsyncThunk(
+  "/cart/updateCart",
+  async (item) => {
+    const response = await updateCart(item);
+    return response;
+  }
+);
+export const removeCartItemAsync = createAsyncThunk(
+  "/cart/removeCartItem",
+  async (itemId) => {
+    const response = await removeCartItem(itemId);
+    return response;
+  }
+);
+
 const initialState = {
   cartItems: [],
-  totalPrice: 0,
   status: "idle",
   error: null,
 };
@@ -23,21 +50,56 @@ const shoppingCartSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(addToCartAsync.pending, (state) => {
+        // add item to cart
         state.status = "loading";
       })
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        const existingItem = state.cartItems.find(
-          (i) => i.id === action.payload.id
-        );
-        if (existingItem) {
-          existingItem.quantity++;
-        } else {
-          state.cartItems.push({ ...action.payload, quantity: 1 });
-        }
-        state.totalPrice += action.payload.price;
+        state.cartItems.push(action.payload);
       })
       .addCase(addToCartAsync.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error;
+      })
+      .addCase(fetchCartByUserIdAsync.pending, (state) => {
+        // fetch cart by user id
+        state.status = "loading";
+      })
+      .addCase(fetchCartByUserIdAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.cartItems = action.payload;
+      })
+      .addCase(fetchCartByUserIdAsync.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error;
+      })
+      .addCase(updateCartAsync.pending, (state) => {
+        // update cart item
+        state.status = "loading";
+      })
+      .addCase(updateCartAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        const index = state.cartItems.findIndex(
+          (item) => item.id === action.payload.id
+        );
+        state.cartItems[index] = action.payload;
+      })
+      .addCase(updateCartAsync.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error;
+      })
+      .addCase(removeCartItemAsync.pending, (state) => {
+        // remove cart item
+        state.status = "loading";
+      })
+      .addCase(removeCartItemAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        const index = state.cartItems.findIndex(
+          (item) => item.id === action.payload.id
+        );
+        state.cartItems.splice(index, 1);
+      })
+      .addCase(removeCartItemAsync.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error;
       });

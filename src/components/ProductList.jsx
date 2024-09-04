@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import { ShoppingCartIcon, StarIcon } from "@heroicons/react/20/solid";
 import { HeartIcon } from "@heroicons/react/24/outline";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCartAsync } from "../features/shopingCart/shoppingCartSlice";
 
+export default function ProductList({ products }) {
+  const { loggedInUser } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(
+      addToCartAsync({ ...product, quantity: 1, user: loggedInUser.id })
+    );
+  };
 
-export default function ProductList({products}) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-3 lg:max-w-7xl lg:px-8">
@@ -50,7 +59,10 @@ export default function ProductList({products}) {
                 <button>
                   <HeartIcon className="w-5 h-5 text-red-500 inline" />
                 </button>
-                <button className="py-2 flex items-center justify-center px-2.5 gap-1 w-fit rounded-md bg-blue-700 text-white">
+                <button
+                  className="py-2 flex items-center justify-center px-2.5 gap-1 w-fit rounded-md bg-blue-700 text-white"
+                  onClick={() => handleAddToCart(product)}
+                >
                   <ShoppingCartIcon className="w-5 h-5 inline text-white" />
                   <span>Add to Cart</span>
                 </button>

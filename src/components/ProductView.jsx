@@ -6,6 +6,7 @@ import { Radio, RadioGroup } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchProductByIdAsync } from "../features/product/productSlice";
+import { addToCartAsync } from "../features/shopingCart/shoppingCartSlice";
 
 // const product = {
 //   name: "Basic Tee 6-Pack",
@@ -93,10 +94,16 @@ export default function ProductView() {
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector((state) => state.product.selectedProduct);
   const { id } = useParams();
-
+  const { loggedInUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    dispatch(
+      addToCartAsync({ ...product, quantity: 1, user: loggedInUser.id })
+    );
+  };
+
   useEffect(() => {
-    console.log(id);
     dispatch(fetchProductByIdAsync(id));
   }, [dispatch, id]);
 
@@ -152,29 +159,33 @@ export default function ProductView() {
               className="h-full w-full object-cover object-center"
             />
           </div>
-          {product?.images?.length>1 && <><div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                alt={product?.title}
-                src={product?.images[1]}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                alt={product?.title}
-                src={product?.images[2]}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
-          <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-            <img
-              alt={product?.title}
-              src={product?.images[3]}
-              className="h-full w-full object-cover object-center"
-            />
-          </div></>}
+          {product?.images?.length > 1 && (
+            <>
+              <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+                <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+                  <img
+                    alt={product?.title}
+                    src={product?.images[1]}
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+                  <img
+                    alt={product?.title}
+                    src={product?.images[2]}
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+              <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+                <img
+                  alt={product?.title}
+                  src={product?.images[3]}
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+            </>
+          )}
         </div>
 
         {/* Product info */}
@@ -189,7 +200,7 @@ export default function ProductView() {
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-gray-900">
-              ${product?.price}
+              ₹{(product?.price * 80).toFixed(2)}
             </p>
 
             {/* Reviews */}
@@ -318,7 +329,7 @@ export default function ProductView() {
               </div>
 
               <button
-                type="submit"
+                onClick={(e) => handleAddToCart(e)}
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Add to bag
@@ -332,7 +343,9 @@ export default function ProductView() {
               <h3 className="sr-only">Description</h3>
 
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{product?.description}</p>
+                <p className="text-base text-gray-900">
+                  {product?.description}
+                </p>
               </div>
             </div>
 
@@ -351,9 +364,15 @@ export default function ProductView() {
             </div>
 
             <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Scan to see Details</h2>
+              <h2 className="text-sm font-medium text-gray-900">
+                Scan to see Details
+              </h2>
               <div className="mt-4 space-y-6">
-                <img src={product?.meta?.qrCode} alt={product?.title} className="w-20 h-20" />
+                <img
+                  src={product?.meta?.qrCode}
+                  alt={product?.title}
+                  className="w-20 h-20"
+                />
                 {/* <p className="text-sm text-gray-600"></p> */}
               </div>
             </div>
