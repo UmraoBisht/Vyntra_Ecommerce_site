@@ -10,7 +10,6 @@ export const createUser = (userData) => {
   });
 };
 
-
 export const checkUser = (loginInfo) => {
   return new Promise(async (resolve, reject) => {
     const { email, password } = loginInfo;
@@ -34,5 +33,17 @@ export const checkUser = (loginInfo) => {
     } else {
       reject({ message: "User not found" });
     }
+  });
+};
+
+export const updateUser = (userData) => {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:3000/users/" + userData.id, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData),
+    });
+    const data = await response.json();
+    resolve(data);
   });
 };

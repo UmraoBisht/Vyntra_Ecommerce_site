@@ -35,6 +35,7 @@ export default function SignUp() {
                 createUserAsync({
                   email: data.email,
                   password: data.createPassword,
+                  addresses: [],
                 })
               );
             })}
@@ -97,9 +98,7 @@ export default function SignUp() {
                     className="flex w-8 h-8 absolute cursor-pointer right-1 items-center select-none"
                     onClick={handleShowPassword}
                   >
-                    {
-                      showPassword?"🙈":"👁️"
-                    }
+                    {showPassword ? "🙈" : "👁️"}
                   </span>
                 </div>
                 {errors?.createPassword && (

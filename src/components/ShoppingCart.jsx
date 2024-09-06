@@ -84,7 +84,7 @@ export default function ShoppingCart() {
                           <div>
                             <div className="flex justify-between text-base font-medium text-gray-900">
                               <h3>
-                                <Link to={`/productview${cartItem.id}`}>
+                                <Link to={`/productview/${cartItem.id}`}>
                                   {cartItem.title}
                                 </Link>
                               </h3>

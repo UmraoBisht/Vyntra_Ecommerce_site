@@ -31,8 +31,8 @@ const navigation = [
   { name: "Adult", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
+  { name: "Profile", href: "/profile" },
+  { name: "My Orders", href: "/orders" },
   { name: "Sign out", href: "/signin" },
 ];
 
@@ -200,7 +200,7 @@ export default function Navbar({ children }) {
                     ></ShoppingBagIcon>
                     {cartItems.length > 0 && (
                       <span className="absolute top-0 right-0 inline-flex items-center justify-center w-4 h-4 rounded-full bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                      {cartItems.length}
+                        {cartItems.length}
                       </span>
                     )}
                   </div>

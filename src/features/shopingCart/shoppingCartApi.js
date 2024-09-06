@@ -33,10 +33,21 @@ export const updateCart = (item) => {
 
 export const removeCartItem = (itemId) => {
   return new Promise(async (resolve) => {
-    const response = await fetch(`http://localhost:3000/cart/${itemId}`, {
+    await fetch(`http://localhost:3000/cart/${itemId}`, {
       method: "DELETE",
     });
-    const data = await response.json();
     resolve({ id: itemId });
+  });
+};
+
+export const resetCart = (userId) => {
+  return new Promise(async (resolve) => {
+    const cartItems = await fetchCartByUserId(userId); // Fetch the cart items for the user
+    // Delete each item in the cart
+    for (let item of cartItems) {
+      await removeCartItem(item.id);
+    }
+    // const data = await response.json();
+    resolve({ status: "success" });
   });
 };

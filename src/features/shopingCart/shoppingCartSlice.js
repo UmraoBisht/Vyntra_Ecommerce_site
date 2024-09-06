@@ -4,6 +4,7 @@ import {
   fetchCartByUserId,
   removeCartItem,
   updateCart,
+  resetCart,
 } from "./shoppingCartApi";
 
 export const addToCartAsync = createAsyncThunk(
@@ -36,6 +37,13 @@ export const removeCartItemAsync = createAsyncThunk(
     return response;
   }
 );
+export const resetCartAsync = createAsyncThunk(
+  "/cart/resetCart",
+  async (userId) => {
+    const response = await resetCart(userId);
+    return response;
+  }
+);
 
 const initialState = {
   cartItems: [],
@@ -46,7 +54,9 @@ const initialState = {
 const shoppingCartSlice = createSlice({
   name: "shoppingCart",
   initialState,
-  reducers: {},
+  reducers: {
+  
+  },
   extraReducers: (builder) => {
     builder
       .addCase(addToCartAsync.pending, (state) => {
@@ -100,6 +110,18 @@ const shoppingCartSlice = createSlice({
         state.cartItems.splice(index, 1);
       })
       .addCase(removeCartItemAsync.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error;
+      })
+      .addCase(resetCartAsync.pending, (state) => {
+        //reset cart
+        state.status = "loading";
+      })
+      .addCase(resetCartAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.cartItems = [];
+      })
+      .addCase(resetCartAsync.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error;
       });

@@ -2,15 +2,17 @@ import React, { useEffect } from "react";
 import Home from "./pages/Home";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
-import NotFound from "./components/NotFound";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ShoppingCartPage from "./pages/shoppingCartPage";
-import CheckoutPage from "./pages/CheckOutPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import Protected from "./components/auth/Protected";
 import { fetchCartByUserIdAsync } from "./features/shopingCart/shoppingCartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import PageNotFound from "./pages/404";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
+import OrderConfirmation from "./pages/OrderConfirmation";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,14 +39,6 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/checkout",
-    element: (
-      <Protected>
-        <CheckoutPage />
-      </Protected>
-    ),
-  },
-  {
     path: "/productview/:id",
     element: (
       <Protected>
@@ -53,8 +47,28 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/checkout",
+    element: (
+      <Protected>
+        <CheckoutPage />
+      </Protected>
+    ),
+  },
+  {
+    path: "/order-success",
+    element: <OrderSuccessPage />,
+  },
+  {
+    path: "/order-confirmation/:id",
+    element: <OrderConfirmation />,
+  },
+  {
+    path: "/orders/:id",
+    element: <PageNotFound />,
+  },
+  {
     path: "*",
-    element: <NotFound />,
+    element: <PageNotFound />,
   },
 ]);
 
