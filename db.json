@@ -12306,97 +12306,186 @@
   "orders": [
     {
       "user": {
-        "email": "test1@gmail.com",
-        "password": "Test1@gmail.com",
-        "id": 2,
+        "email": "leomon354@gmail.com",
+        "password": "Leomon123",
+        "id": 1,
         "addresses": [
           {
-            "name": "Home",
-            "email": "test1@gmail.com",
-            "phone": "+91 8826980376",
+            "id": 1,
+            "name": "home",
+            "phone": "(123) 456-7890",
+            "email": "john.doe@example.com",
+            "street": "124 Mx",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94102",
+            "country": "United States"
+          },
+          {
+            "id": 2,
+            "name": "Work",
+            "phone": "(123) 456-7890",
+            "email": "john.doe@example.com",
+            "street": "124 Mx",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94102",
+            "country": "United States"
+          },
+          {
+            "name": "Home2",
+            "email": "leomon354@gmail.com",
+            "phone": "8826980376",
             "country": "India",
             "street": "4/412 Khichripur",
-            "city": "Delhi",
-            "state": "Delhi",
-            "pinCode": "110091"
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "pinCode": "571005"
           }
         ]
       },
       "cartItems": [
         {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
+          "title": "iPhone 13 Pro",
+          "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+          "category": "smartphones",
+          "price": 1099.99,
+          "discountPercentage": 18.3,
+          "rating": 3.42,
+          "stock": 26,
           "tags": [
-            "beauty",
-            "mascara"
+            "smartphones",
+            "apple"
           ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
+          "brand": "Apple",
+          "sku": "YGQKHPGK",
+          "weight": 8,
           "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
+            "width": 22.39,
+            "height": 9.77,
+            "depth": 19.6
           },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
           "reviews": [
             {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Aria Roberts",
+              "reviewerEmail": "aria.roberts@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Ryan Graham",
+              "reviewerEmail": "ryan.graham@x.dummyjson.com"
             },
             {
               "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Mason Wright",
+              "reviewerEmail": "mason.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.625Z",
+            "updatedAt": "2024-05-23T08:56:21.625Z",
+            "barcode": "2986724589988",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/1.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/2.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/thumbnail.png",
+          "quantity": 5,
+          "user": 1,
+          "id": 1
+        },
+        {
+          "title": "iPhone X",
+          "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+          "category": "smartphones",
+          "price": 899.99,
+          "discountPercentage": 14.19,
+          "rating": 4.96,
+          "stock": 99,
+          "tags": [
+            "smartphones",
+            "apple"
+          ],
+          "brand": "Apple",
+          "sku": "9QN3UDUD",
+          "weight": 10,
+          "dimensions": {
+            "width": 27.86,
+            "height": 8.53,
+            "depth": 17.07
+          },
+          "warrantyInformation": "3 months warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 1,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Eleanor Tyler",
+              "reviewerEmail": "eleanor.tyler@x.dummyjson.com"
             },
             {
               "rating": 5,
               "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Maya Reed",
+              "reviewerEmail": "maya.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Elena Baker",
+              "reviewerEmail": "elena.baker@x.dummyjson.com"
             }
           ],
           "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
+          "minimumOrderQuantity": 2,
           "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
+            "createdAt": "2024-05-23T08:56:21.625Z",
+            "updatedAt": "2024-05-23T08:56:21.625Z",
+            "barcode": "4331405454760",
             "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
           },
           "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/1.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/2.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/3.png"
           ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/thumbnail.png",
           "quantity": 1,
-          "user": 2,
+          "user": 1,
           "id": 2
         }
       ],
-      "totalPrice": "799.20",
-      "totalItems": 1,
+      "totalPrice": "511995.20",
+      "totalItems": 6,
       "selectedAddress": {
-        "name": "Home",
-        "email": "test1@gmail.com",
-        "phone": "+91 8826980376",
-        "country": "India",
-        "street": "4/412 Khichripur",
-        "city": "Delhi",
-        "state": "Delhi",
-        "pinCode": "110091"
+        "id": 1,
+        "name": "home",
+        "phone": "(123) 456-7890",
+        "email": "john.doe@example.com",
+        "street": "124 Mx",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94102",
+        "country": "United States"
       },
       "selectedPaymentMethod": "cod",
       "status": "pending",
@@ -12444,70 +12533,136 @@
       },
       "cartItems": [
         {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
+          "title": "iPhone 13 Pro",
+          "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+          "category": "smartphones",
+          "price": 1099.99,
+          "discountPercentage": 18.3,
+          "rating": 3.42,
+          "stock": 26,
           "tags": [
-            "beauty",
-            "mascara"
+            "smartphones",
+            "apple"
           ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
+          "brand": "Apple",
+          "sku": "YGQKHPGK",
+          "weight": 8,
           "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
+            "width": 22.39,
+            "height": 9.77,
+            "depth": 19.6
           },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
           "reviews": [
             {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Aria Roberts",
+              "reviewerEmail": "aria.roberts@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Ryan Graham",
+              "reviewerEmail": "ryan.graham@x.dummyjson.com"
             },
             {
               "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Mason Wright",
+              "reviewerEmail": "mason.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.625Z",
+            "updatedAt": "2024-05-23T08:56:21.625Z",
+            "barcode": "2986724589988",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/1.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/2.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/thumbnail.png",
+          "quantity": 5,
+          "user": 1,
+          "id": 1
+        },
+        {
+          "title": "iPhone X",
+          "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+          "category": "smartphones",
+          "price": 899.99,
+          "discountPercentage": 14.19,
+          "rating": 4.96,
+          "stock": 99,
+          "tags": [
+            "smartphones",
+            "apple"
+          ],
+          "brand": "Apple",
+          "sku": "9QN3UDUD",
+          "weight": 10,
+          "dimensions": {
+            "width": 27.86,
+            "height": 8.53,
+            "depth": 17.07
+          },
+          "warrantyInformation": "3 months warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 1,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Eleanor Tyler",
+              "reviewerEmail": "eleanor.tyler@x.dummyjson.com"
             },
             {
               "rating": 5,
               "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Maya Reed",
+              "reviewerEmail": "maya.reed@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.625Z",
+              "reviewerName": "Elena Baker",
+              "reviewerEmail": "elena.baker@x.dummyjson.com"
             }
           ],
           "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
+          "minimumOrderQuantity": 2,
           "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
+            "createdAt": "2024-05-23T08:56:21.625Z",
+            "updatedAt": "2024-05-23T08:56:21.625Z",
+            "barcode": "4331405454760",
             "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
           },
           "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/1.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/2.png",
+            "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/3.png"
           ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/thumbnail.png",
           "quantity": 1,
           "user": 1,
-          "id": 1
+          "id": 2
         }
       ],
-      "totalPrice": "799.20",
-      "totalItems": 1,
+      "totalPrice": "511995.20",
+      "totalItems": 6,
       "selectedAddress": {
         "id": 1,
         "name": "home",
@@ -12522,552 +12677,6 @@
       "selectedPaymentMethod": "cod",
       "status": "pending",
       "id": 2
-    },
-    {
-      "user": {
-        "email": "leomon354@gmail.com",
-        "password": "Leomon123",
-        "id": 1,
-        "addresses": [
-          {
-            "id": 1,
-            "name": "home",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "id": 2,
-            "name": "Work",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "name": "Home2",
-            "email": "leomon354@gmail.com",
-            "phone": "8826980376",
-            "country": "India",
-            "street": "4/412 Khichripur",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "pinCode": "571005"
-          }
-        ]
-      },
-      "cartItems": [
-        {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
-          "tags": [
-            "beauty",
-            "mascara"
-          ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
-          "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
-          },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
-          "reviews": [
-            {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        },
-        {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
-          "tags": [
-            "beauty",
-            "mascara"
-          ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
-          "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
-          },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
-          "reviews": [
-            {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-          "quantity": 1,
-          "user": 1,
-          "id": 2
-        }
-      ],
-      "totalPrice": "1598.40",
-      "totalItems": 2,
-      "selectedAddress": {
-        "id": 1,
-        "name": "home",
-        "phone": "(123) 456-7890",
-        "email": "john.doe@example.com",
-        "street": "124 Mx",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": "94102",
-        "country": "United States"
-      },
-      "selectedPaymentMethod": "upi",
-      "status": "pending",
-      "id": 3
-    },
-    {
-      "user": {
-        "email": "leomon354@gmail.com",
-        "password": "Leomon123",
-        "id": 1,
-        "addresses": [
-          {
-            "id": 1,
-            "name": "home",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "id": 2,
-            "name": "Work",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "name": "Home2",
-            "email": "leomon354@gmail.com",
-            "phone": "8826980376",
-            "country": "India",
-            "street": "4/412 Khichripur",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "pinCode": "571005"
-          }
-        ]
-      },
-      "cartItems": [
-        {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
-          "tags": [
-            "beauty",
-            "mascara"
-          ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
-          "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
-          },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
-          "reviews": [
-            {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalPrice": "799.20",
-      "totalItems": 1,
-      "selectedAddress": {
-        "id": 1,
-        "name": "home",
-        "phone": "(123) 456-7890",
-        "email": "john.doe@example.com",
-        "street": "124 Mx",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": "94102",
-        "country": "United States"
-      },
-      "selectedPaymentMethod": "cod",
-      "status": "pending",
-      "id": 4
-    },
-    {
-      "user": {
-        "email": "leomon354@gmail.com",
-        "password": "Leomon123",
-        "id": 1,
-        "addresses": [
-          {
-            "id": 1,
-            "name": "home",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "id": 2,
-            "name": "Work",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "name": "Home2",
-            "email": "leomon354@gmail.com",
-            "phone": "8826980376",
-            "country": "India",
-            "street": "4/412 Khichripur",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "pinCode": "571005"
-          }
-        ]
-      },
-      "cartItems": [
-        {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
-          "tags": [
-            "beauty",
-            "mascara"
-          ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
-          "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
-          },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
-          "reviews": [
-            {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalPrice": "799.20",
-      "totalItems": 1,
-      "selectedAddress": {
-        "id": 1,
-        "name": "home",
-        "phone": "(123) 456-7890",
-        "email": "john.doe@example.com",
-        "street": "124 Mx",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": "94102",
-        "country": "United States"
-      },
-      "selectedPaymentMethod": "cod",
-      "status": "pending",
-      "id": 5
-    },
-    {
-      "user": {
-        "email": "leomon354@gmail.com",
-        "password": "Leomon123",
-        "id": 1,
-        "addresses": [
-          {
-            "id": 1,
-            "name": "home",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "id": 2,
-            "name": "Work",
-            "phone": "(123) 456-7890",
-            "email": "john.doe@example.com",
-            "street": "124 Mx",
-            "city": "San Francisco",
-            "state": "CA",
-            "zip": "94102",
-            "country": "United States"
-          },
-          {
-            "name": "Home2",
-            "email": "leomon354@gmail.com",
-            "phone": "8826980376",
-            "country": "India",
-            "street": "4/412 Khichripur",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "pinCode": "571005"
-          }
-        ]
-      },
-      "cartItems": [
-        {
-          "title": "Essence Mascara Lash Princess",
-          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-          "category": "beauty",
-          "price": 9.99,
-          "discountPercentage": 7.17,
-          "rating": 4.94,
-          "stock": 5,
-          "tags": [
-            "beauty",
-            "mascara"
-          ],
-          "brand": "Essence",
-          "sku": "RCH45Q1A",
-          "weight": 2,
-          "dimensions": {
-            "width": 23.17,
-            "height": 14.43,
-            "depth": 28.01
-          },
-          "warrantyInformation": "1 month warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "Low Stock",
-          "reviews": [
-            {
-              "rating": 2,
-              "comment": "Very unhappy with my purchase!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "John Doe",
-              "reviewerEmail": "john.doe@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Nolan Gonzalez",
-              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Very satisfied!",
-              "date": "2024-05-23T08:56:21.618Z",
-              "reviewerName": "Scarlett Wright",
-              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "30 days return policy",
-          "minimumOrderQuantity": 24,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.618Z",
-            "updatedAt": "2024-05-23T08:56:21.618Z",
-            "barcode": "9164035109868",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalPrice": "799.20",
-      "totalItems": 1,
-      "selectedAddress": {
-        "id": 2,
-        "name": "Work",
-        "phone": "(123) 456-7890",
-        "email": "john.doe@example.com",
-        "street": "124 Mx",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": "94102",
-        "country": "United States"
-      },
-      "selectedPaymentMethod": "cod",
-      "status": "pending",
-      "id": 6
     }
   ]
 }

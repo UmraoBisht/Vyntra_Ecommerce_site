@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { resetCartAsync } from "../features/shopingCart/shoppingCartSlice";
-import { resetCurrentOrder } from "../features/order/orderSlice";
+
 
 function OrderConfirmation() {
   const { currentOrder } = useSelector((state) => state.order);
@@ -11,7 +11,6 @@ function OrderConfirmation() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(resetCartAsync(loggedInUser.id));
-    // dispatch(resetCurrentOrder());
   }, [dispatch, loggedInUser]);
   return (
     <>

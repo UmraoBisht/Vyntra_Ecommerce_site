@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchUserOrders } from "./userApi";
 
-const fetchUserOrdersAsync = createAsyncThunk(
+export const fetchUserOrdersAsync = createAsyncThunk(
   "/user/fetchUserOrders",
   async (userId) => {
     const response = await fetchUserOrders(userId);
@@ -10,7 +10,7 @@ const fetchUserOrdersAsync = createAsyncThunk(
 );
 
 const initialState = {
-  userInfo: [],
+  userOrders: [],
   status: "idle",
   error: null,
 };
@@ -26,7 +26,7 @@ const userOrdersSlice = createSlice({
       })
       .addCase(fetchUserOrdersAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        state.userInfo = action.payload;
+        state.userOrders = action.payload;
       })
       .addCase(fetchUserOrdersAsync.rejected, (state, action) => {
         state.status = "failed";

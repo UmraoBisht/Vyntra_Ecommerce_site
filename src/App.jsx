@@ -13,6 +13,8 @@ import { useDispatch, useSelector } from "react-redux";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import OrderPage from "./pages/OrderPage";
+import ProfilePage from "./pages/ProfilePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,15 +58,43 @@ const router = createBrowserRouter([
   },
   {
     path: "/order-success",
-    element: <OrderSuccessPage />,
+    element: (
+      <Protected>
+        <OrderSuccessPage />
+      </Protected>
+    ),
   },
   {
     path: "/order-confirmation/:id",
-    element: <OrderConfirmation />,
+    element: (
+      <Protected>
+        <OrderConfirmation />
+      </Protected>
+    ),
+  },
+  {
+    path: "/orders",
+    element: (
+      <Protected>
+        <OrderPage />
+      </Protected>
+    ),
   },
   {
     path: "/orders/:id",
-    element: <PageNotFound />,
+    element: (
+      <Protected>
+        <PageNotFound />
+      </Protected>
+    ),
+  },
+  {
+    path: "/profile",
+    element: (
+      <Protected>
+        <ProfilePage />
+      </Protected>
+    ),
   },
   {
     path: "*",
