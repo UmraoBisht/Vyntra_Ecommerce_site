@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchUserOrders } from "./userApi";
+import { fetchLoggedInUserInfo, fetchUserOrders, updateUser } from "./userApi";
 
 export const fetchUserOrdersAsync = createAsyncThunk(
   "/user/fetchUserOrders",
@@ -9,14 +9,31 @@ export const fetchUserOrdersAsync = createAsyncThunk(
   }
 );
 
+export const fetchLoggedInUserInfoAsync = createAsyncThunk(
+  "/user/fetchLoggedInUserInfo",
+  async (userId) => {
+    const response = await fetchLoggedInUserInfo(userId);
+    return response;
+  }
+);
+
+export const updateUserAsync = createAsyncThunk(
+  "/auth/updateUser",
+  async (userData) => {
+    const response = await updateUser(userData);
+    return response;
+  }
+);
+
 const initialState = {
   userOrders: [],
+  userInfo: null,
   status: "idle",
   error: null,
 };
 
-const userOrdersSlice = createSlice({
-  name: "userOrders",
+const userSlice = createSlice({
+  name: "user",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -31,8 +48,30 @@ const userOrdersSlice = createSlice({
       .addCase(fetchUserOrdersAsync.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+      })
+      .addCase(fetchLoggedInUserInfoAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchLoggedInUserInfoAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.userInfo = action.payload;
+      })
+      .addCase(fetchLoggedInUserInfoAsync.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      })
+      .addCase(updateUserAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(updateUserAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        state.userInfo = action.payload;
+      })
+      .addCase(updateUserAsync.rejected, (state, action) => {
+        state.status = "idle";
+        state.error = action.error;
       });
   },
 });
 
-export default userOrdersSlice.reducer;
+export default userSlice.reducer;

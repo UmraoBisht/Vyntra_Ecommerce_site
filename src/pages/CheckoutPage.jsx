@@ -10,8 +10,8 @@ import {
 } from "../features/shopingCart/shoppingCartSlice";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { updateUserAsync } from "../features/auth/authSlice";
 import { createOrderAsync } from "../features/order/orderSlice";
+import { updateUserAsync } from "../features/user/userSlice";
 
 export default function CheckoutPage() {
   const { cartItems } = useSelector((state) => state.cart);
