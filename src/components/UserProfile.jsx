@@ -30,10 +30,18 @@ function UserProfile() {
     setSelectedAddressIndex(null);
   };
 
+  const handleDeleteAddress = (index) => {
+    const newUser = {
+      ...userInfo,
+      addresses: [...userInfo.addresses],
+    };
+    newUser?.addresses?.splice(index, 1);
+    dispatch(updateUserAsync(newUser));
+  };
+
   const handleEditForm = (index) => {
     const address = userInfo.addresses[index];
     setSelectedAddressIndex(index);
-    // console.log(address);
     setValue("name", address.name);
     setValue("email", address.email);
     setValue("phone", address.phone);
@@ -346,7 +354,7 @@ function UserProfile() {
             </form>
           )}
         </div>
-        <div className="border-b border-gray-900/10 pb-12">
+        <div className="border-b border-gray-900/10 pb-12 mt-2">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Addresses
           </h2>
@@ -359,13 +367,14 @@ function UserProfile() {
               <li key={index} className="flex justify-between gap-x-6 py-5">
                 <div className="flex min-w-0 items-center gap-x-4">
                   <input
-                    id={"address" + address.id}
+                    id={index}
                     name="addressses"
                     type="radio"
                     onChange={() => handleEditForm(index)}
+                    checked={selectedAddressIndex === index}
                     className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                   />
-                  <label htmlFor={"address" + address.id}>
+                  <label htmlFor={index} className="cursor-pointer">
                     <div className="min-w-0 flex-auto">
                       <p className="text-sm font-semibold leading-6 text-gray-900">
                         {address.name}
@@ -375,16 +384,17 @@ function UserProfile() {
                         {address.state} , {address.country}
                       </p>
                     </div>
+                    <div className="hidden shrink-0 sm:flex sm:flex-col">
+                      <p className="text-sm leading-6 text-gray-900">
+                        {address.email}
+                      </p>
+                      <p className="text-sm leading-6 text-gray-900">
+                        {address?.phone}
+                      </p>
+                    </div>
                   </label>
                 </div>
-                <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p className="text-sm leading-6 text-gray-900">
-                    {address.email}
-                  </p>
-                  <p className="text-sm leading-6 text-gray-900">
-                    {address?.phone}
-                  </p>
-                </div>
+
                 <div>
                   <button
                     type="button"

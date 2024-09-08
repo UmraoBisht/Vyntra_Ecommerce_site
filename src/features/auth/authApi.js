@@ -36,6 +36,12 @@ export const checkUser = (loginInfo) => {
   });
 };
 
+export const singOut = () => {
+  return new Promise(async (resolve) => {
+    resolve({ data: "success" });
+  });
+};
+
 // export const updateUser = (userData) => {
 //   return new Promise(async (resolve) => {
 //     const response = await fetch("http://localhost:3000/users/" + userData.id, {

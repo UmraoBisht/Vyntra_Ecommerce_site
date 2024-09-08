@@ -12261,17 +12261,6 @@
           "pinCode": "1100091"
         },
         {
-          "id": 2,
-          "name": "Work",
-          "phone": "(123) 456-7890",
-          "email": "john.doe@example.com",
-          "street": "124 Mx",
-          "city": "San Francisco",
-          "state": "CA",
-          "zip": "94102",
-          "country": "United States"
-        },
-        {
           "name": "Home2",
           "email": "leomon354@gmail.com",
           "phone": "8826980376",

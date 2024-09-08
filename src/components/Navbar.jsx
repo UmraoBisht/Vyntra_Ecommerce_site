@@ -18,12 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCartByUserIdAsync } from "../features/shopingCart/shoppingCartSlice";
 import { useEffect } from "react";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
+
 const navigation = [
   { name: "Men", href: "#", current: true },
   { name: "Kids", href: "#", current: false },
@@ -33,7 +28,7 @@ const navigation = [
 const userNavigation = [
   { name: "Profile", href: "/profile" },
   { name: "My Orders", href: "/orders" },
-  { name: "Sign out", href: "/signin" },
+  { name: "Logout", href: "/logout" },
 ];
 
 function classNames(...classes) {
@@ -44,6 +39,15 @@ export default function Navbar({ children }) {
   const { cartItems } = useSelector((state) => state.cart);
   const { loggedInUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+
+  const user = {
+    name: loggedInUser.email.split("@")[0],
+    email: loggedInUser.email,
+    imageUrl:
+      "/src/assets/cat.png",
+  };
+
+
   useEffect(() => {
     dispatch(fetchCartByUserIdAsync(loggedInUser.id));
   }, [dispatch]);

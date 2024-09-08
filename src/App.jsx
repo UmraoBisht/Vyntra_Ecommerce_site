@@ -15,6 +15,7 @@ import OrderSuccessPage from "./pages/OrderSuccessPage";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import OrderPage from "./pages/OrderPage";
 import ProfilePage from "./pages/ProfilePage";
+import Logout from "./components/Logout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUpPage />,
+  },
+  {
+    path: "/logout",
+    element: <Logout />,
   },
   {
     path: "/shoppingcart",
