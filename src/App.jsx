@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import Protected from "./components/auth/Protected";
-import { fetchCartByUserIdAsync } from "./features/shopingCart/shoppingCartSlice";
-import { useDispatch, useSelector } from "react-redux";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import OrderPage from "./pages/OrderPage";
 import ProfilePage from "./pages/ProfilePage";
-import Logout from "./components/Logout";
+import Logout from "./components/auth/Logout";
+import ForgotPassword from "./components/auth/ForgotPassword";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/logout",
     element: <Logout />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
   },
   {
     path: "/shoppingcart",

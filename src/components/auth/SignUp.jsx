@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { assets } from "../../assets/frontend_assets/assets";
 import { useForm } from "react-hook-form";
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createUserAsync } from "../../features/auth/authSlice";
@@ -153,7 +151,7 @@ export default function SignUp() {
               to={"/signin"}
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
-              Sign In
+              sign In
             </Link>
           </p>
         </div>
@@ -161,7 +159,7 @@ export default function SignUp() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             alt="WearWell"
-            src={assets.logo_dark}
+            src="src/assets/logo_dark.png"
             className="mx-auto h-24 w-auto"
           />
         </div>

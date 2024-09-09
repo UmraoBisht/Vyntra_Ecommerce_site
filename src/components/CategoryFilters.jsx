@@ -80,7 +80,6 @@ export default function CategoryFilters() {
         newFilters[section.id].splice(index, 1);
       }
     }
-    console.log(newFilters);
     setFilter(newFilters);
   };
 
@@ -89,7 +88,6 @@ export default function CategoryFilters() {
       _sort: option.sort,
       _order: option.order,
     };
-    console.log(sort);
     setSort(sort);
   };
 

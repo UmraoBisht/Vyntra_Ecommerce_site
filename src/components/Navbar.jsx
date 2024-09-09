@@ -12,7 +12,6 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { assets } from "../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCartByUserIdAsync } from "../features/shopingCart/shoppingCartSlice";
@@ -20,10 +19,10 @@ import { useEffect } from "react";
 
 
 const navigation = [
-  { name: "Men", href: "#", current: true },
-  { name: "Kids", href: "#", current: false },
-  { name: "Women", href: "#", current: false },
-  { name: "Adult", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  // { name: "Kids", href: "#", current: false },
+  // { name: "Women", href: "#", current: false },
+  // { name: "Adult", href: "#", current: false },
 ];
 const userNavigation = [
   { name: "Profile", href: "/profile" },
@@ -60,15 +59,15 @@ export default function Navbar({ children }) {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <Link to={"/"}>
-                    <img alt="WearWell" src={assets.logo} className="h-8 " />
+                    <img alt="WearWell" src="src/assets/logo_white.png" className="h-8 " />
                   </Link>
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         aria-current={item.current ? "page" : undefined}
                         className={classNames(
                           item.current
@@ -78,7 +77,7 @@ export default function Navbar({ children }) {
                         )}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
